@@ -9,7 +9,7 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', function() {
-  gulp.src('./src/styles/**/*.scss')
+  gulp.src('./src/styles/main.scss')
     .pipe(sass())
     .pipe(autoprefixer({
             browsers: ['last 2 versions'],
@@ -18,6 +18,15 @@ gulp.task('sass', function() {
     .pipe(minifyCss())
     .pipe(concat('main.min.css'))
     .pipe(gulp.dest('./public/styles'));
+});
+
+gulp.task('libs', function() {
+  return gulp.src([
+    './bower_components/jquery/dist/jquery.min.js',
+    './bower_components/responsive-images.js/responsive-img.min.js'
+  ])
+  .pipe(concat('libs.min.js'))
+  .pipe(gulp.dest('./public/scripts'));
 });
 
 gulp.task('scripts', function() {
@@ -33,8 +42,12 @@ gulp.task('html', function() { 
 });
 
 gulp.task('img', function() { 
-    return gulp.src('./src/img/*/**')
+    return gulp.src('./src/img/**/**')
     .pipe(gulp.dest('./public/img/'));
+});
+gulp.task('fonts', function() { 
+    return gulp.src('./src/fonts/**/**')
+    .pipe(gulp.dest('./public/fonts/'));
 });
 
 gulp.task('watch', function () {
@@ -51,7 +64,7 @@ gulp.task('connect', function () {
   });
 });
 
-gulp.task("default", ["sass", "html", "img", "scripts"]);
+gulp.task("default", ["sass", "html", "img", "libs", "scripts", "fonts"]);
 
 gulp.task("serve", ["watch", "connect"]);
 

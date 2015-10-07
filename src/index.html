@@ -4,9 +4,201 @@
     <title>Competency centre</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/main.min.css" rel="stylesheet">
   </head>
   <body>
-      
-    
+    <header class="header">
+      <div class="container">
+        <a href="#" class="header__logo">
+          <img alt="logo" data-src-base='img/'  data-src=">0:logo.png" data-src2x='>0:logo@2x.png'/>
+        </a>
+        <nav class='header-nav'>
+          <button class='trigger'>
+            <i class="trigger__line"></i>
+            <i class="trigger__line"></i>
+            <i class="trigger__line"></i>
+          </button>
+          <ul class="header-nav__list">
+            <li class="header-nav__item"><a href="#" class="header-nav__link">News</a></li>
+            <li class="header-nav__item"><a href="#" class="header-nav__link">Members</a></li>
+            <li class="header-nav__item"><a href="#" class="header-nav__link">Events</a></li>
+            <li class="header-nav__item"><a href="#" class="header-nav__link">Trainings</a></li>
+          </ul>
+      </div>
+    </header>
+
+    <section class="banner">
+      <div class="carousel">
+        <div class="carousel__content">
+          <div class="carousel__item">
+            <img class="carousel_img" alt=""  data-src-base='img/' data-src="<768:banner_mobile.png, >768:banner_tablet.png, >992:banner_desktop.png, >1200:banner_desktop_hd.png" data-src2x="<768:banner_mobile@2x.png, >768:banner_tablet@2x.png, >992:banner_desktop@2x.png, >1200:banner_desktop_hd@2x.png"/>
+          </div>
+        </div>
+        <ul class="carousel-nav">
+          <li class="carousel-nav__item carousel-nav__item--active"></li>
+          <li class="carousel-nav__item"></li>
+          <li class="carousel-nav__item"></li>
+          <li class="carousel-nav__item"></li>
+        </ul>
+      </div>
+      <div class="container">
+        <div class="banner-info">
+          <h1 class="banner-info__title">JAVADAY KIEV CONFERENCE</h1>
+          <p class="banner-info__text">JavaDay Kiev is an annual conference focused on new features of the Java language and Java-related technologies.</p>
+          <img src="img/calendar.png" class="banner-info__icon">
+          <span class="banner-info__date">January 15th - January 17th</span>
+          <a href="#" class="btn banner-info__btn">JOIN NOW</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="container">
+        <div class="row">
+          <div class="column">
+            <h2>Competency News</h2>
+            <article class="news">
+              <h6 class="date-title">12.01.2015</h6>
+              <h3 class="red-color">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</h3>
+              <p class="news__text">So strongly and metaphysically did I conceive of my situation then, that while earnestly watching his motions, I seemed distinctly to perceive that my own individ.</p>
+            </article>
+            <article class="news">
+              <h6 class="date-title">12.01.2015</h6>
+              <h3 class="red-color">Synth polaroid bitters chillwave pickled</h3>
+              <p class="news__text">Keytar McSweeney's Williamsburg, readymade leggings try-hard 90's street art letterpress hoodie occupy Wes Anderson Banksy. Asymmetrical viral letterpress, McSwee.</p>
+            </article>
+            <article class="news">
+              <h6 class="date-title">12.01.2015</h6>
+              <h3 class="red-color con">Fixie tote bag ethnic keytar</h3>
+              <p class="news__text">Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin.</p>
+            </article>
+          </div>
+          <div class="column">
+            <h2>Conference Agenda</h2>
+            <ul class="agenda">
+              <li class="agenda__item">
+                <h6 class="time-title">10:00 - 12:00</h6>
+                <p class="agenda__text">Nam porttit.</p>
+              </li>
+              <li class="agenda__item">
+                <h6 class="time-title">12:00 - 12:45</h6>
+                <p class="agenda__text">Cursus Condimentum Dolor</p>
+              </li>
+              <li class="agenda__item">
+                <h6 class="time-title">12:45 - 16:40</h6>
+                <p class="agenda__text">Amet Condimentum</p>
+              </li>
+              <li class="agenda__item">
+                <h6 class="time-title">16:40 - 17:40</h6>
+                <p class="agenda__text">Coffee Break</p>
+              </li>
+              <li class="agenda__item">
+                <h6 class="time-title">17:40 - 18:50</h6>
+                <p class="agenda__text">Lorem Ligula Etiam Condimentum</p>
+              </li>
+              <li class="agenda__item">
+                <h6 class="time-title">18:50 - 19:25</h6>
+                <p class="agenda__text">Consectetur Lorem</p>
+              </li>
+              <li class="agenda__item">
+                <h6 class="time-title">20:00 - 23:00</h6>
+                <p class="agenda__text">Fun Afterparty</p>
+              </li>
+            </ul>
+          </div>
+          <div class="column">
+            <h2>Members List</h2>
+            <ol class="members">
+              <li class="members__item">
+                <span class="members__num">1</span>
+                <h3 class="members__title">Cheryl James</h3>
+                <p class="members__text">Villeurbanne</p>
+              </li>
+              <li class="members__item">
+                <span class="members__num">2</span>
+                <h3 class="members__title">Maria Kelly</h3>
+                <p class="members__text">Asnières-sur-Seine</p>
+              </li>
+              <li class="members__item">
+                <span class="members__num">3</span>
+                <h3 class="members__title">Carolyn Elliott</h3>
+                <p class="members__text">Caen</p>
+              </li>
+              <li class="members__item">
+                <span class="members__num">4</span>
+                <h3 class="members__title">Christine Estrada</h3>
+                <p class="members__text">Besançon</p>
+              </li>
+              <li class="members__item">
+                <span class="members__num">5</span>
+                <h3 class="members__title">Anna Howell</h3>
+                <p class="members__text">La Rochelle</p>
+              </li>
+              <li class="members__item">
+                <span class="members__num">6</span>
+                <h3 class="members__title">Christine McDonald</h3>
+                <p class="members__text">Saint-Étienne</p>
+              </li>
+              <li class="members__item">
+                <span class="members__num">7</span>
+                <h3 class="members__title">Sharon Wheeler</h3>
+                <p class="members__text">Caen</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <h2>Last Article</h2>
+            <img class="content-image" alt="" data-src-base='img/' data-src="<768:photo_mobile_2.png, >768:photo_tablet_1.png, >992:photo_1.png" data-src2x="<768:photo_mobile_2@2x.png, >768:photo_tablet_1@2x.png, >992:photo_1@2x.png">
+            <h3 class="red-color img-title">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia.</h3>
+            <p>Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis.</p>
+            <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Curabitur blandit tempus porttitor.</p>
+          </div>
+          <div class="column">
+            <h2>Centre Life</h2>
+            <img class="content-image" alt="" data-src-base='img/' data-src="<768:photo_mobile_1.png, >768:photo_tablet_2.png, >992:photo_2.png" data-src2x="<480:photo_mobile_2@2x.png, >768:photo_tablet_1@2x.png, >992:photo_1@2x.png">
+            <h3 class="red-color img-title">Maecenas faucibus mollis interdum. Morbi leo risus.</h3>
+            <p>Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis.</p>
+            <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Curabitur blandit tempus porttitor.</p>
+          </div>
+        </div>
+        <ul class="social">
+          <li class="social__item"><a href="#" class="social__icon social__icon--facebook"></a></li>
+          <li class="social__item"><a href="#" class="social__icon social__icon--twitter"></a></li>
+          <li class="social__item"><a href="#" class="social__icon social__icon--linkedin"></a></li>
+          <li class="social__item"><a href="#" class="social__icon social__icon--instagram"></a></li>
+          <li class="social__item"><a href="#" class="social__icon social__icon--google"></a></li>
+          <li class="social__item"><a href="#" class="social__icon social__icon--youtube"></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="column">
+            <p class="footer__text">Copyright © 2015 Java Competency Centre</p>
+          </div>
+          <div class="column">
+            <ul class="footer-nav">
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Help</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">About Us</a></li>
+              <li class="footer-nav__item"><a href="#" class="footer-nav__link">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <p class="footer__text">We Are Made in &lt;EPAM&gt; Systems</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/libs.min.js"></script>
+    <script src="scripts/main.min.js"></script>
   </body>
 </html>
