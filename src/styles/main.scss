@@ -116,6 +116,9 @@ p {
   left: 0;
   top: 0;
   width: 100%;
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.1);
   &__logo {
     width: 159px;
     float: left;
@@ -342,6 +345,7 @@ p {
     text-align: center;
     line-height: 30px;
     border-radius: 50%;
+    font-size: 16px;
   }
   &__title {
     color: $red;
