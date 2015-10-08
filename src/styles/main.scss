@@ -8,7 +8,8 @@ $gray: #778081;
 /*base styles*/
 body {
   font-family: 'pt_sansregular', sans-serif;
-  background: #fff;
+  background: url(../img/textura.png);
+  min-width: 320px;
 }
 * {
   margin: 0;
@@ -54,6 +55,10 @@ img {
   background: $red;
   padding: 11px 25px;
   font-size: 14px;
+  transition: 0.1s ease-in-out;
+  &:hover {
+    background: #b2262c;
+  }
 }
 h2 {
   font-size: 24px;
@@ -85,9 +90,17 @@ p {
   margin: 0 0 5px 0;
   letter-spacing: 0.8px;
 }
-
 .red-color {
   color: $red;
+}
+.block-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &--z-index {
+    z-index: 9;
+  }
 }
 /*base styles*/
 
@@ -132,6 +145,10 @@ p {
     display: block;
     font-size: 24px;
     padding: 10px 30px 10px 35px;
+    transition: 0.1s ease-in-out;
+    &:hover {
+      opacity: 0.7;
+    }
   }
   &--open {
     .trigger {
@@ -204,6 +221,9 @@ p {
     height: auto;
     min-height: 100%;
   }
+  &__arrow {
+    display: none;
+  }
 }
 .carousel-nav {
   position: absolute;
@@ -273,6 +293,12 @@ p {
   &__text {
     font-size: 16px;
     line-height: 138%;
+  }
+  &__link {
+    text-decoration: none;
+    &:hover h3 {
+      text-decoration: underline;
+    }
   }
 }
 .agenda {
@@ -349,6 +375,10 @@ p {
     width: 29px;
     height: 29px;
     background-size: 100%;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      opacity: 0.7;
+    }
     &--facebook {
       background-image: url(../img/Facebook_mobile.png);
     }
@@ -445,12 +475,18 @@ p {
     &--margin {
       margin: 0 0 14px;
     }
-    &--md-6 {
+    &--sm-6 {
       width: 50%;
     }
-    &--md-4 {
+    &--sm-4 {
       width: 33.333%;
     }
+  }
+  .text-right-sm {
+    text-align: right;
+  }
+  .text-left-sm {
+    text-align: left;
   }
   /*end of base styles*/
 
@@ -463,18 +499,26 @@ p {
   }
   .header-nav {
     &__list {
-    transform: scale(1);
-    position: relative;
-    background: transparent;
-    padding: 0;  
+      transform: scale(1);
+      position: relative;
+      background: transparent;
+      padding: 0;  
     }
     &__item {
       display: inline-block;
     }
     &__link {
       color: #454545;
-      padding: 20px 0 20px 22px;
+      padding: 0;
+      margin: 20px 0 20px 22px;
       font-size: 20px;
+      opacity: 0.7;
+      transition: 0.1s ease-in-out;
+      border-bottom: 2px solid transparent;
+      &:hover {
+        opacity: 1;
+        border-bottom: 2px solid $red;
+      }
     }
   }
   /*end of header*/
@@ -486,10 +530,10 @@ p {
   }
   .banner-info {
     max-width: 529px;
-        margin: 0 auto;
+    margin: 0 auto;
     &__title {
-          margin: 0 0 15px;
-              font-size: 39px;
+      margin: 0 0 15px;
+      font-size: 39px;
     }
     &__text {
       margin: 0 0 25px;
@@ -502,9 +546,9 @@ p {
       letter-spacing: 1px;
     }
     &__btn {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 0 0 38px;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 0 0 38px;
     }
   }
   /*end of baner*/
@@ -514,84 +558,233 @@ p {
     padding: 40px 0;
   }
   .members-padding {
-     padding-left: 60px;
+    padding-left: 60px;
   }
   .news-padding {
     padding-bottom: 14px;
   }
   .content-image {
     max-width: 307px;
-    margin: 5px 32px 8px 0px;
-    float: left;
-  }
-  .members-wrap {
-    padding-left: 60px;
+    &--left {
+      float: left;
+      margin: 5px 32px 8px 0px;
+    }
+    &--right {
+      float: right;
+      margin: 5px 0px 8px  32px;
+    }
   }
   .img-title {
     margin: 0 0 22px;
   }
   .social {
-  margin: 36px 0 32px;
-  text-align: center;
-  &__item {
-    width: auto;
-    padding: 0 30px;
-  }
-  &__icon {
-    width: 41px;
-    height: 41px;
-    &--facebook {
-      background-image: url(../img/Facebook.png);
+    margin: 36px 0 32px;
+    text-align: center;
+    &__item {
+      width: auto;
+      padding: 0 30px;
     }
-    &--twitter {
-      background-image: url(../img/Twitter.png);
-    }
-    &--linkedin {
-      background-image: url(../img/LinkedIN.png);
-    }
-    &--instagram {
-      background-image: url(../img/Instagram.png);
-    }
-    &--google {
-      background-image: url(../img/Google.png);
-    }
-    &--youtube {
-      background-image: url(../img/Youtube.png);
-    }
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+    &__icon {
+      width: 41px;
+      height: 41px;
       &--facebook {
-        background-image: url(../img/Facebook@2x.png);
+        background-image: url(../img/Facebook.png);
       }
       &--twitter {
-        background-image: url(../img/Twitter@2x.png);
+        background-image: url(../img/Twitter.png);
       }
       &--linkedin {
-        background-image: url(../img/LinkedIN@2x.png);
+        background-image: url(../img/LinkedIN.png);
       }
       &--instagram {
-        background-image: url(../img/Instagram@2x.png);
+        background-image: url(../img/Instagram.png);
       }
       &--google {
-        background-image: url(../img/Google@2x.png);
+        background-image: url(../img/Google.png);
       }
       &--youtube {
-        background-image: url(../img/Youtube@2x.png);
+        background-image: url(../img/Youtube.png);
+      }
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+        &--facebook {
+          background-image: url(../img/Facebook@2x.png);
+        }
+        &--twitter {
+          background-image: url(../img/Twitter@2x.png);
+        }
+        &--linkedin {
+          background-image: url(../img/LinkedIN@2x.png);
+        }
+        &--instagram {
+          background-image: url(../img/Instagram@2x.png);
+        }
+        &--google {
+          background-image: url(../img/Google@2x.png);
+        }
+        &--youtube {
+          background-image: url(../img/Youtube@2x.png);
+        }
       }
     }
   }
-}
   /*end of content*/
 
   /*footer*/
   .footer {
     white-space: nowrap;
-        padding: 48px 0 50px;
+    padding: 48px 0 50px;
     &__text {
       margin: 0;
+      &--left {
+        text-align: left;
+      }
+      &--right {
+        text-align: right;
+      }
     }
   }
   .footer-nav {
     margin: 0;
   }
   /*end of footer*/
+}
+
+@media (min-width: 992px) {
+  /*base styles*/
+  .container {
+    width: 992px;
+  }
+  .column {
+    &--margin {
+      margin: 0 0 14px;
+    }
+    &--md-4 {
+      width: 33.333%;
+    }
+    &--md-6 {
+      width: 50%;
+    }
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 16px;
+    margin: 0 0 8px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 125%;
+  }
+  /*end of base styles*/
+
+  /*baner*/
+  .banner {
+    padding: 179px 0 125px;
+  }
+  .banner-info {
+    margin: 0 0 0 72px;
+    padding-bottom: 24px;
+    &__title {
+      font-size: 40px;
+      letter-spacing: -0.4px;
+      margin: 0 0 12px;
+    }
+    &__text {
+      margin: 0 0 20px;
+    }
+    &__icon {
+      margin: 0 20px 0 3px;
+    }
+    &__date {
+      letter-spacing: 0.5px;
+    }
+  }
+  /*end of baner*/
+
+  /*carousel*/
+  .carousel {
+    &__arrow {
+      display: block;
+      border: 0;
+      background-color: transparent;
+      width: 18px;
+      height: 47px;
+      position: absolute;
+      top: -24px;
+      background-size: 100%;
+      cursor: pointer;
+      transition: 0.1s ease-in-out;
+      &:hover {
+        opacity:0.7;
+      }
+      &--left {
+        background-image: url(../img/arrow_left.png);
+        left: 0;
+      }
+      &--right {
+        background-image: url(../img/arrow_right.png);
+        right: 0;
+      }
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        &--left {
+          background-image: url(../img/arrow_left@2x.png);
+          left: 40px;
+        }
+        &--right {
+          background-image: url(../img/arrow_right@2x.png);
+          right: 40px;
+        } 
+      }
+    }  
+  }
+  /*end of carousel*/
+
+  /*content*/
+  .content {
+    padding: 46px 0
+  }
+  .members-padding {
+    padding-left: 15px;
+  }
+  .news {
+    margin: 0 0 25px;
+    &__text {
+      font-size: 14px;
+      line-height: 125%;
+    }
+  }
+  .agenda {
+    &__text {
+      font-size: 14px;
+      line-height: 125%;  
+    }
+    &__item {
+      margin: 0 0 28px;
+    }
+  }
+  .content-image {
+    width: 200px;
+    &--left {
+      margin: 4px 23px 15px 0;
+    }
+    &--right {
+      margin: 4px 0 15px 23px;
+    }
+  }
+  .social {
+    margin: 36px 0 24px;
+    &__item {
+      padding: 0 45px;
+    }
+  }
+  /*end of content*/
+}
+
+@media (min-width: 1070px) {
+  /*base styles*/
+  .container {
+    width: 1064px;
+  }
+  /*end of base styles*/ 
 }
