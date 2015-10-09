@@ -6,7 +6,7 @@ Epam test
 Clone a project:
 
 ```bash
-git clone https://github.com/mrsecret911/template-generator.git
+git clone git@github.com:mrsecret911/competency-centre.git
 ```
 
 Enter to the folder:
